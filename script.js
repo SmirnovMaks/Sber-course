@@ -33,12 +33,12 @@ console.log(str)
 
 //3.6
 
-const obj = {
+const obj1 = {
     name: name,
     last_name: last_name,
     age: age
 }
-console.log(obj)
+console.log(obj1)
 
 //////////////
 
@@ -105,3 +105,40 @@ if (speed > 0 && speed <= 30) {
 } else {
     console.log('Вы едете слишком быстро, сбавьте скорость')
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////
+
+// 7.1
+
+const obj = {
+    "Яблоко": "фрукт",
+    "Арбуз": "ягода",
+    "Помидор": "овощ",
+    "Огурец": "овощ",
+    "Вишня": "ягода"
+}
+
+let obj2 = {}
+let prop
+let newProp
+
+for (prop in obj) {
+    newProp = obj[prop];
+    !obj2.hasOwnProperty(obj[prop]) ? obj2[newProp] = 1 : obj2[newProp]++
+}
+console.log(obj2);
